@@ -1,19 +1,28 @@
-var MenuItems = document.getElementById("MenuItems");
-MenuItems.style.maxHeight = "0px";
-
-function menutoggle() {
-  if (MenuItems.style.maxHeight === "0px") {
-    MenuItems.style.maxHeight = "200px";
-  } else {
-    MenuItems.style.maxHeight = "0px";
-  }
-}
-
-const slideshowImages = document.querySelectorAll('.slideshow img');
+ //declare variable MenuItems which take ul having id "MenuItems"
+        
+ var MenuItems = document.getElementById("MenuItems");
+ MenuItems.style.maxHeight = "0px";//by default, we have set menu or dropdown menu height to 0px, means it is close by default
+ 
+ function menutoggle()//this is the function which we have called above in nav which works on small devices and users click on it
+ {
+     if (MenuItems.style.maxHeight =="0px")//when user click on it and if it is closed or its height is 0px, then it will open or it should have heigt of 200px upon clicking
+     {
+         MenuItems.style.maxHeight = "200px"
+     }
+     else//if user not clicked or it has already opened, then it will upon clicking again closed
+     {
+         MenuItems.style.maxHeight = "0px" 
+     }
+ 
+ }
+ const slideshowImages = document.querySelectorAll('.slideshow img');
 let currentSlide = 0;
 
 function showSlide(n) {
+  // Reset all images
   slideshowImages.forEach(img => img.classList.remove('active'));
+  
+  // Show the desired slide
   slideshowImages[n].classList.add('active');
 }
 
@@ -22,24 +31,8 @@ function nextSlide() {
   showSlide(currentSlide);
 }
 
+// Automatically change slides every 3 seconds
 setInterval(nextSlide, 3000);
-
-function adjustSlides() {
-  var windowWidth = window.innerWidth;
-  
-  if (windowWidth < 768) {
-    // Perform responsive adjustments for slideshow
-    slideshowImages.forEach(img => img.style.width = "100%");
-  } else {
-    // Reset adjustments for larger screens
-    slideshowImages.forEach(img => img.style.width = "");
-  }
-}
-
-window.addEventListener("resize", adjustSlides);
 
 // Show the initial slide
 showSlide(currentSlide);
-
-// Adjust slides on initial load
-adjustSlides();
