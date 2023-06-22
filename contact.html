@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="css.css" rel="stylesheet">
+    <style>
+        /* Add responsive styles here */
+        @media screen and (max-width: 600px) {
+            /* Styles for screens with maximum width of 600px */
+            /* Adjust as needed */
+            .slide img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="image1.png" alt="Slide 1">
+            <div class="slide-caption"></div>
+        </div>
+        <div class="slide">
+            <img src="image2.png" alt="Slide 2">
+            <div class="slide-caption"></div>
+        </div>
+        <div class="slide">
+            <img src="image3.png" alt="Slide 3">
+            <div class="slide-caption"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="contact.js"></script> 
+</body>
+</html>

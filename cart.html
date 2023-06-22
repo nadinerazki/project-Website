@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- making navigation bar consist of logo and menu links -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="RedStore logo" width="125px">
+            </div>
+
+            <!-- menu -->
+             <nav> 
+                <ul id="MenuItems"><!-- use this id in js -->
+                    <li><a href="">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" alt="cart" width="30px" height="30px"><!-- adding cart image in navigation section -->
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()"><!-- this is the menu icon which will be displayed on smaller screens with 3 lines, and when we click on it, it will open upside down or like a dropdown menu, to open like this we have to pass one menutoggle function to it which we have written in the end in js -->
+        </div>
+    </div>
+
+    <!-- Cart Item Detail -->
+    <div class="container cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/buy-1.jpg">
+                        <div>
+                            <p>Red Printed Tshirt</p>
+                            <small>Price: $50.00</small>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/buy-2.jpg">
+                        <div>
+                            <p>Red Printed Tshirt</p>
+                            <small>Price: $60.00</small>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$60.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="images/buy-3.jpg">
+                        <div>
+                            <p>Red Printed Tshirt</p>
+                            <small>Price: $75.00</small>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$75.00</td>
+            </tr>
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$200.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>$30.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$230.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container"><!-- it will follow the same styling as the header -->
+            <div class="row">
+                <!-- it contains 4 columns col1 contains text and col2 contain image col3 contains useful links and col4 contains social media links -->
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phones.</p>
+                   
+                   <!-- add images of play store and app store in the 1st column -->
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>   
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cart.js"></script>
+</body>
+</html>

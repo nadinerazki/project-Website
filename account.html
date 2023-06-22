@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+   
+    <div class="container">
+
+        <!--making navigation bar consist of logo and menu links-->
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="RedStore logo" width="125px">
+            </div>
+
+            <!--menu-->
+            <nav> 
+                <ul id="MenuItems"><!--use this id in js-->                       
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" alt="cart" width="30px" height="30px"><!--adding cart image in navigation section -->
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()"><!--this is the menu icon which will be displayed on smaller screens with 3 lines, and when we click on it, it will open upside down or like a dropdown menu, to open like this we have to pass one menutoggle function to it which we have written in the end in js-->
+        </div>
+    </div>
+     
+    <!-- Account Page -->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"><!--1 column for image and other for form-->
+                    <img src="images/image1.png" alt="Image">
+                </div>
+                
+                <div class="col-2">
+                    <div class="form-container"><!--column for form-->
+                        <div class="form-btn"><!--button for login and register-->
+                            <span onclick="login()">Login</span><!--use js-->
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator"><!--red orange bar-->
+                        </div>
+
+                        <form id="LoginForm"><!--login form-->
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="Submit" class="btn">Login</button>
+                            <a href="">Forgot Password?</a>
+                        </form>
+
+                        <form id="RegForm"><!--registration form-->
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="Submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container"><!-- it will follow the same styling as the header-->
+            <div class="row">
+                <!--it contains 4 columns col1 contains text and col2 contains an image col3 contains useful links and col4 contains social media links-->
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phones.</p>
+                     
+                    <!--add images of play store and app store in the 1st column-->
+                    <div class="app-logo">
+                        <img src="images/play-store.png" alt="Play Store">
+                        <img src="images/app-store.png" alt="App Store">
+                    </div>   
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png" alt="Logo">
+                    <p>Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <script type="text/javascript" src="account.js"></script>       
+</body>
+</html>
